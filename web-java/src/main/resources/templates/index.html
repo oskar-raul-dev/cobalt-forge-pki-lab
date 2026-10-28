@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="es" data-theme="dark" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cobalt Forge</title>
+  <link rel="icon" th:href="@{/img/logo.svg}" type="image/svg+xml">
+  <link rel="stylesheet" th:href="@{/css/pico.min.css}">
+  <link rel="stylesheet" th:href="@{/css/theme.css}">
+</head>
+<body>
+  <header class="container">
+    <nav>
+      <ul>
+        <li class="brand"><img th:src="@{/img/logo.svg}" alt=""> <span>Cobalt <span class="accent">Forge</span></span></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <p class="eyebrow">Laboratorio PKI · OpenSSL</p>
+    <h1>Hello, World</h1>
+    <p>
+      Sitio de prueba para validar la cadena de confianza
+      <code>Root CA → Intermediate CA → servidor</code>.
+    </p>
+
+    <div class="grid">
+      <article class="stat">
+        <small>Protocolo</small>
+        <p th:classappend="${secure} ? 'is-ok' : 'is-warn'" th:text="${secure} ? 'HTTPS' : 'HTTP'">HTTP</p>
+      </article>
+      <article class="stat">
+        <small>Host</small>
+        <p th:text="${host}">localhost</p>
+      </article>
+      <article class="stat">
+        <small>Java</small>
+        <p th:text="${javaVersion}">21</p>
+      </article>
+    </div>
+  </main>
+</body>
+</html>

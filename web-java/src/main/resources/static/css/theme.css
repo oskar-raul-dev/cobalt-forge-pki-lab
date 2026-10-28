@@ -1,0 +1,76 @@
+/*
+ * Tema Cobalt Forge sobre Pico CSS (pico.min.css).
+ * Para cambiar la paleta, edita solo las variables de :root.
+ */
+
+@font-face {
+  font-family: "Space Grotesk";
+  src: url("../fonts/space-grotesk-latin-wght-normal.woff2") format("woff2-variations");
+  font-weight: 300 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("../fonts/jetbrains-mono-latin-wght-normal.woff2") format("woff2-variations");
+  font-weight: 100 800;
+  font-display: swap;
+}
+
+/* Paleta: cobalt-700 es el azul cobalto clásico (#0047AB) */
+:root {
+  --cobalt-50: #eef4ff;
+  --cobalt-100: #dbe7ff;
+  --cobalt-200: #bdd3ff;
+  --cobalt-300: #8fb5ff;
+  --cobalt-400: #5a8cf7;
+  --cobalt-500: #2f66e6;
+  --cobalt-600: #1a52d0;
+  --cobalt-700: #0047ab;
+  --cobalt-800: #0a3a86;
+  --cobalt-900: #0d2f68;
+  --cobalt-950: #081d42;
+
+  --ember-400: #ffb057;
+  --ok-400: #6ee7b7;
+}
+
+/* Variables de Pico mapeadas a la paleta (el sitio usa data-theme="dark") */
+[data-theme="dark"] {
+  --pico-font-family-sans-serif: "Space Grotesk", system-ui, sans-serif;
+  --pico-font-family-monospace: "JetBrains Mono", ui-monospace, Menlo, monospace;
+
+  --pico-background-color: var(--cobalt-950);
+  --pico-color: var(--cobalt-100);
+  --pico-h1-color: var(--cobalt-50);
+  --pico-h2-color: var(--cobalt-50);
+  --pico-muted-color: var(--cobalt-300);
+  --pico-muted-border-color: var(--cobalt-800);
+
+  --pico-primary: var(--cobalt-400);
+  --pico-primary-background: var(--cobalt-700);
+  --pico-primary-border: var(--cobalt-700);
+  --pico-primary-underline: rgba(90, 140, 247, 0.5);
+  --pico-primary-hover: var(--cobalt-300);
+  --pico-primary-hover-background: var(--cobalt-600);
+  --pico-primary-hover-border: var(--cobalt-600);
+  --pico-primary-focus: rgba(90, 140, 247, 0.375);
+  --pico-primary-inverse: #fff;
+
+  --pico-card-background-color: var(--cobalt-900);
+  --pico-card-border-color: var(--cobalt-800);
+  --pico-card-sectioning-background-color: var(--cobalt-950);
+  --pico-code-background-color: var(--cobalt-900);
+  --pico-code-color: var(--cobalt-200);
+}
+
+/* Detalles propios del sitio */
+.brand { display: flex; align-items: center; gap: .75rem; font-weight: 600; font-size: 1.25rem; }
+.brand img { width: 2.5rem; height: 2.5rem; }
+.accent { color: var(--ember-400); }
+.eyebrow { font-family: var(--pico-font-family-monospace); font-size: .8rem; letter-spacing: .15em; text-transform: uppercase; color: var(--pico-muted-color); margin-bottom: .5rem; }
+.stat { margin: 0; }
+.stat small { color: var(--pico-muted-color); }
+.stat p { margin: .25rem 0 0; font-family: var(--pico-font-family-monospace); font-size: 1.15rem; }
+.is-ok { color: var(--ok-400); }
+.is-warn { color: var(--ember-400); }

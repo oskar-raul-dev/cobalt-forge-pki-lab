@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: cobalt-forge-lab
+
+# Por ahora solo HTTP. La configuración HTTPS (SSL bundle con los PEM de cert/)
+# se agrega cuando el tutorial de certificados llegue al certificado de servidor.
+server:
+  port: 8080
