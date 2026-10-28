@@ -1,0 +1,24 @@
+# Material criptográfico generado por los laboratorios: nunca se versiona.
+# Del directorio cert/ solo se sube su README.
+cert/*
+!cert/README.md
+
+# Por si alguna clave, CSR o certificado queda fuera de cert/
+*.pem
+*.key
+*.crt
+*.cer
+*.der
+*.csr
+*.srl
+*.p12
+*.pfx
+
+# macOS
+.DS_Store
+
+# Build de Spring Boot
+web-java/target/
+
+# VS Code workspace
+*.code-workspace
